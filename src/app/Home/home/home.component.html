@@ -1,0 +1,38 @@
+<div class="container my-5">
+    <div class="row gy-5 mt-5">
+
+        <div class="col-sm-12 col-md-12 col-lg-4 my-5 line py-5">
+            <h2 class="text-white text-start">
+                Trending Movies to watch
+            </h2>
+            <h4 class=" text-muted text-start">Most watched movies by weeks</h4>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-2 position-relative" *ngFor="let movie of trendingMovies">
+         <div class="position-relative"></div>
+            <a [routerLink]="['/details',movie.media_type,movie.id]">
+            <img [src] = 'imgBasePath+movie.backdrop_path' >
+           </a>
+            <h5 class="text-white text-start mt-2">{{movie.title}}</h5>
+            <div class="rate text-center text-white">{{movie.vote_count}}</div>
+        </div>
+    </div>
+
+    <div class="row gy-5 mt-5">
+
+        <div class="col-sm-12 col-md-12 col-lg-4 my-5 line py-5">
+            <h2 class="text-white text-start">
+                Trending TV to watch
+            </h2>
+            <h4 class=" text-muted text-start">Most watched Tv Show by weeks</h4>
+        </div>
+    
+        <div class="col-sm-12 col-md-6 col-lg-2 position-relative" *ngFor="let tv of trendingTv">
+           <a [routerLink]="['/details',tv.media_type,tv.id]">
+            <img [src] = 'imgBasePath+tv.backdrop_path' >
+           </a>
+            <h5 class="text-white text-start mt-2">{{tv.name}}</h5>
+            <div class="rate text-center text-white">{{tv.vote_count}}</div>
+        </div>
+    </div>
+</div>

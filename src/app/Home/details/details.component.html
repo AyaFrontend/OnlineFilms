@@ -1,0 +1,26 @@
+<div class="container-fluid pt-5 ps-4">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3  ">
+            <img [src]="imgBasePath+result.poster_path" class="w-100">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-9 pt-5">
+            <h2 class="text-white mb-4">{{result.title}}</h2>
+            <h4 class="text-white d-inline-block mb-4">vote: </h4>
+            <p class="d-inline-block text-muted h5 ms-2 mb-4">{{result.vote_average}}</p>
+            <br>
+            <h4 class="text-white d-inline-block mb-2 ">vote count: </h4>
+            <p class="d-inline-block text-muted h5 ms-2 mb-4">{{result.vote_count}}</p>
+            <br>
+            <h4 class="text-white d-inline-block mb-4">Popularity: </h4>
+            <p class="d-inline-block text-muted h5 ms-2 mb-4">{{result.popularity}}</p>
+            <br>
+            <h4 class="text-white d-inline-block mb-4">Relase Date: </h4>
+            <p class="d-inline-block text-muted h5 ms-2 mb-4">{{result.release_date}}</p>
+
+            <h5 class="text-muted">
+                {{result.overview}}
+            </h5>
+       
+        </div>
+    </div>
+</div>
